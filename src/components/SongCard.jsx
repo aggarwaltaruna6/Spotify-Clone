@@ -10,8 +10,6 @@ const SongCard = ({ song, isPlaying, activeSong,data, i }) => {
 
   const dispatch = useDispatch();
 
-  
-
    const handleClick = () => {
     console.log(isPlaying);
     if(isPlaying){
@@ -34,7 +32,7 @@ const SongCard = ({ song, isPlaying, activeSong,data, i }) => {
           }`}
         >
           <PlayPause // adding props
-            isPlaying
+            isPlaying={isPlaying}
             activeSong={activeSong}
             song={song}
             handleClick={handleClick}
